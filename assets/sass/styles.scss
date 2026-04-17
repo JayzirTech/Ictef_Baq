@@ -4,40 +4,67 @@
     box-sizing: border-box;
 }
 
-header{
-    background: linear-gradient(#3633cd, black);
-    height: 9vh;
-    display: flex;
-    align-items: center;
-    img{
-        height: 100%;
-        width: auto;
-    }
-    h1{
-        display: inline;
-        font-size: 1.5vh;
-        color: beige;
-    }
-    nav{
+body{
+    header{
+        background: linear-gradient(#3633cd, black);
+        height: 9vh;
+        width: 100vw;
         display: flex;
-        margin-right: 0.5vw;
-        margin-left: auto;
-        a{
-            font-size: 1.3vh;
-            margin: 0 0.3vw;
-            color: beige;
-            text-decoration: none;
-            padding: 5px;
-            border-radius: 15px;
-            box-shadow: 0px 6px 0px 2px rgba(0,0,0,0.3);
+        align-items: center;
+        position: fixed;
+        img{
+            height: 100%;
         }
-        a:hover{
-            box-shadow: 0px 0px 0px 6px rgba(0,0,0,0.3);
+        h1{
+            display: inline;
             font-size: 1.5vh;
+            color: beige;
         }
-        a:focus{
-            box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3);
+        nav{
+            display: flex;
+            margin-right: 2vw;
+            margin-left: auto;
+            a{
+                font-size: 1.3vh;
+                margin: 0 0.3vw;
+                padding: 5px;
+                color: beige;
+                text-decoration: none;
+                border-radius: 15px;
+                box-shadow: 0px 6px 0px 2px rgba(0,0,0,0.3);
+            }
+            a:hover{
+                box-shadow: 0px 0px 0px 6px rgba(0,0,0,0.3);
+                font-size: 1.5vh;
+            }
+            a:focus{
+                box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.3);
+            }
         }
+    }
+    main{
+        padding: 24vh 15vh 33vh 15vh;
+        text-align: center;
+        font-size: 3vh;
+        background-image: url(/assets/foto_ext_ictefBaq.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        p{
+            background-color: #3633cd6e;
+            border-radius: 15px;
+            padding: 5%;
+            box-shadow: 0px 0px 35px 55px rgba(4, 51, 205,0.3);
+            color: beige;
+        }
+    }
+    div{
+        background: linear-gradient(black, #3633cd, black);
+        box-shadow: 0px 10px 35px 55px black;
+        color: beige;
+
+    }
+    footer{
+        background-color: black;
     }
 }
 
