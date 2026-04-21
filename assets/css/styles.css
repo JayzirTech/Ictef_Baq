@@ -100,13 +100,29 @@ body footer img {
 body footer section:first-child {
   display: flex;
   width: 50vw;
+  align-items: center;
+}
+body footer section:first-child p {
+  height: min-content;
 }
 body footer section:last-child {
   display: flex;
   width: 50vw;
+  justify-content: flex-end;
+  align-items: center;
 }
-body footer a img {
-  height: 50%;
+body footer section:last-child a {
+  text-decoration: none;
+  color: beige;
+  margin: 0 1vw;
+  height: min-content;
+}
+body footer section:last-child a:last-child {
+  margin-right: 3vw;
+}
+body footer section:last-child img {
+  height: 2rem;
+  width: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

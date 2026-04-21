@@ -102,14 +102,28 @@ body{
         section:first-child{
             display: flex;
             width: 50vw;
+            align-items: center;
+            p{
+                height: min-content;
+            }
         }
         section:last-child{
             display: flex;
             width: 50vw;
-        }
-        a{
+            justify-content: flex-end;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: beige;
+                margin: 0 1vw;
+                height: min-content;
+            }
+            a:last-child{
+                margin-right: 3vw;
+            }
             img{
-                height: 50%;
+                height: 2rem;
+                width: auto;
             }
         }
     }
