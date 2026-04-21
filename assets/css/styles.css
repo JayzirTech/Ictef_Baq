@@ -5,28 +5,37 @@
 }
 
 body header {
+  box-sizing: border-box;
   background: linear-gradient(#3633cd, black);
-  height: 5rem;
-  width: 100%;
+  min-height: 8vh;
+  height: auto;
+  width: 100vw;
   display: flex;
   align-items: center;
   position: fixed;
 }
-body header img {
+body header a {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+body header a img {
   height: 100%;
 }
-body header h1 {
+body header a h1 {
   display: inline;
-  font-size: 1.5vh;
+  font-size: 0.8rem;
   color: beige;
 }
 body header nav {
   display: flex;
-  margin-right: 2vw;
+  margin-right: 2.5vw;
   margin-left: auto;
 }
 body header nav a {
-  font-size: 1.3vh;
+  height: min-content;
+  font-size: 0.7rem;
   margin: 0 0.3vw;
   padding: 5px;
   color: beige;
@@ -38,13 +47,41 @@ body header nav a:hover {
   box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.3);
   font-size: 1.5vh;
 }
-body header nav a:focus {
+body header nav a:active {
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+body header button {
+  display: none;
+}
+@media (max-width: 768px) {
+  body header a h1 {
+    display: none;
+  }
+  body header nav {
+    display: none;
+  }
+  body header button {
+    display: block;
+    margin-right: 1rem;
+    margin-left: auto;
+    background-image: radial-gradient(100% 100% at 100% 0, black, #3633cd 100%);
+    border: 0;
+    border-radius: 0.7rem;
+    color: beige;
+    padding: 0.7rem;
+  }
+  body header button img {
+    height: 1rem;
+  }
+  body header button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(-2px);
+  }
 }
 body main {
   padding: 24vh 15vh 33vh 15vh;
   text-align: center;
-  font-size: 3vh;
+  font-size: 2rem;
   background-image: url(/assets/foto_ext_ictefBaq.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -55,6 +92,11 @@ body main p {
   padding: 5%;
   box-shadow: 0px 0px 35px 55px rgba(4, 51, 205, 0.3);
   color: beige;
+}
+@media (max-width: 768px) {
+  body main {
+    padding: 20vh 1vw 33vh 1vw;
+  }
 }
 body #part2 {
   background: linear-gradient(black, #3633cd, black);
@@ -71,6 +113,12 @@ body #part2 section article {
   margin-inline: auto;
   text-align: justify;
 }
+body #part2 section h3 {
+  font-size: 2rem;
+}
+body #part2 section {
+  font-size: 1.5rem;
+}
 body #part2 aside {
   width: 50vw;
   padding-top: 4vh;
@@ -81,12 +129,76 @@ body #part2 aside {
 body #part2 aside img {
   border-radius: 1rem;
   width: 23vw;
-  height: auto;
   margin: 0.7vw;
 }
-body form {
+@media (max-width: 768px) {
+  body #part2 {
+    display: block;
+  }
+  body #part2 section {
+    width: 100%;
+  }
+  body #part2 aside {
+    width: 100%;
+  }
+  body #part2 aside img {
+    width: 45%;
+  }
+}
+body #part3 {
   background: linear-gradient(black, #3633cd, black);
   padding: 5rem;
+}
+body #part3 form {
+  padding: 1rem;
+  box-shadow: 0px 0px 35px 55px rgba(4, 51, 205, 0.3);
+  border-radius: 2rem;
+}
+body #part3 form legend {
+  justify-self: center;
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+  color: beige;
+}
+body #part3 form label {
+  display: block;
+  font-size: 1.2rem;
+  color: beige;
+}
+body #part3 form label::after {
+  content: "*";
+  color: red;
+}
+body #part3 form input {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 2rem;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+}
+body #part3 form textarea {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 10rem;
+  border-radius: 0.7rem;
+  padding: 0.2rem 0.4rem;
+  font-size: 1rem;
+}
+body #part3 form button {
+  display: block;
+  margin-right: 1rem;
+  margin-left: auto;
+  background-image: radial-gradient(100% 100% at 100% 0, black, #3633cd 100%);
+  border: 0;
+  border-radius: 0.7rem;
+  color: beige;
+  padding: 0.7rem;
+  font-size: 1.2rem;
+}
+body #part3 form span {
+  display: block;
+  text-align: right;
+  margin-right: 1.4vw;
 }
 body footer {
   background-color: black;
@@ -121,7 +233,7 @@ body footer section:last-child a:last-child {
   margin-right: 3vw;
 }
 body footer section:last-child img {
-  height: 2rem;
+  height: 1.7rem;
   width: auto;
 }
 

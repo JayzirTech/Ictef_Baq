@@ -10,8 +10,10 @@
 
     <body>
         <header>
-            <img src="./assets/logo_ictefBaq.png" alt="Logo_ictefBaq">
-            <h1>Inglesia Cristiana<br>Tu Enlace Familiar<br>Barranquilla</h1>
+            <a href="#starPage">
+                <img src="./assets/logo_ictefBaq.png" alt="Logo_ictefBaq">
+                <h1>Inglesia Cristiana<br>Tu Enlace Familiar<br>Barranquilla</h1>
+            </a>
 
             <nav>
                 <a href="#quinessomos"><h2>Quiénes somos</h2></a>
@@ -19,9 +21,13 @@
                 <a href="#ubicacion"><h2>Ubicación</h2></a>
                 <a href="#peticiondeoracion"><h2>Petición de oración</h2></a>
             </nav>
+
+            <button id="menu">
+                <img src="./assets/icons/puntos_menu.png" alt="Menú">
+            </button>
         </header>
         
-        <main>
+        <main id="starPage">
             
             <p>
                 Bienenidos a nuestra página web, aquí encontrás toda la información sobre nuestra iglesia.<br><br>
@@ -58,7 +64,7 @@
 
                 <article id="ubicacion">
                     <h3>Ubicación</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d902.0263683030972!2d-74.80994250237943!3d10.921662585310507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1776188252313!5m2!1ses-419!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d902.0263683030972!2d-74.80994250237943!3d10.921662585310507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1776188252313!5m2!1ses-419!2sco" width="95%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </article>
             </section>
 
@@ -76,28 +82,31 @@
             </aside>
         </section>
 
-        <form action="" id="peticiondeoracion">
-            <legend>Petición de Oración</legend>
+        <section id="part3">
+            <form action="" id="peticiondeoracion">
+                <legend>Petición de Oración</legend>
 
-            <label for="nombreYApellido">Nombre Y Apellido</label>
-            <input type="text" id="nombreYApellido" placeholder="Juan Perez">
+                <label for="nombreYApellido">Nombre Y Apellido</label>
+                <input type="text" id="nombreYApellido" placeholder="Juan Perez" required>
 
-            <label for="fechaDeNacimiento">Fecha de Nacimiento</label>
-            <input type="date">
+                <label for="fechaDeNacimiento">Fecha de Nacimiento</label>
+                <input type="date" required>
 
-            <label for="correoElectronico">Correo Electrónico</label>
-            <input type="email" id="correoElectronico" placeholder="jperez@gmail.com">
+                <label for="correoElectronico">Correo Electrónico</label>
+                <input type="email" id="correoElectronico" placeholder="jperez@gmail.com" required>
 
-            <label for="numeroCelular">Número de Celular</label>
-            <input type="tel" id="numeroCelular" placeholder="+57 3008000909">
+                <label for="numeroCelular">Número de Celular</label>
+                <input type="tel" id="numeroCelular" placeholder="+57 3008000909" required>
 
-            <label for="peticion">
-                Por favor, indique el motivo de su solicitud. Esto nos ayudará a canalizar su caso de acuerdo con su necesidad
-            </label>
-            <input type="text" id="peticion">
-            
-            <button>Enviar</button> 
-        </form>
+                <label for="peticion">
+                    Por favor, indique el motivo de su solicitud. Esto nos ayudará a canalizar su caso de acuerdo con su necesidad
+                </label>
+                <textarea name="Petición" id="peticion" required></textarea>
+                
+                <button>Enviar</button> 
+                <span>Todos los campos con * son obligatorios</span>
+            </form>
+        </section>
         
         <footer>
             <section>
