@@ -59,6 +59,13 @@ body header button {
   }
   body header nav {
     display: none;
+    flex-direction: column;
+  }
+  body header nav.show {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 4.5rem;
   }
   body header button {
     display: block;
@@ -104,7 +111,7 @@ body #part2 {
   display: flex;
 }
 body #part2 section {
-  width: 50vw;
+  width: 45vw;
   justify-content: center;
 }
 body #part2 section article {
@@ -120,7 +127,7 @@ body #part2 section {
   font-size: 1.5rem;
 }
 body #part2 aside {
-  width: 50vw;
+  width: 55vw;
   padding-top: 4vh;
   display: flex;
   flex-wrap: wrap;
@@ -128,8 +135,14 @@ body #part2 aside {
 }
 body #part2 aside img {
   border-radius: 1rem;
-  width: 23vw;
+  width: 23rem;
   margin: 0.7vw;
+  object-fit: contain;
+  height: min-content;
+}
+body #part2 aside img:last-child {
+  width: 35rem;
+  max-width: 48vw;
 }
 @media (max-width: 768px) {
   body #part2 {
@@ -142,7 +155,14 @@ body #part2 aside img {
     width: 100%;
   }
   body #part2 aside img {
-    width: 45%;
+    width: 35rem;
+    max-width: 95vw;
+  }
+  body #part2 aside img:nth-child(2) {
+    display: none;
+  }
+  body #part2 aside img:last-child {
+    max-width: 95vw;
   }
 }
 body #part3 {
@@ -153,11 +173,12 @@ body #part3 form {
   padding: 1rem;
   box-shadow: 0px 0px 35px 55px rgba(4, 51, 205, 0.3);
   border-radius: 2rem;
+  padding-top: 9vh;
 }
 body #part3 form legend {
   justify-self: center;
   margin-bottom: 0.7rem;
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   color: beige;
 }
 body #part3 form label {
